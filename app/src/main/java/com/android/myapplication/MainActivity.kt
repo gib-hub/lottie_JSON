@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     var on = true
-    var checked = 1
+    var check = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                 switchh.setMinAndMaxProgress(0.5f, 1.0f);
                 switchh.playAnimation();
                 Toast.makeText(this, "off", Toast.LENGTH_SHORT).show()
-                on = false
+                on = true
             }
         }
 
@@ -35,15 +35,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         checkbox.setOnClickListener {
-            if (checked == 1) {
+            if (check == 1) {
                 checkbox.speed = 1f
                 checkbox.playAnimation()
-                checked = 0
+                check = 0
 
             } else{
                 checkbox.speed = -1f
                 checkbox.playAnimation()
-                checked = 1
+                check = 1
             }
         }
 
